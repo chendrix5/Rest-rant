@@ -5,5 +5,16 @@ h1 {
   .btn-primary{
     background-color: rgb(5, 81, 223);
     color: white;
+    
+  }
+  #chiaFood{
+    width: 30%;
+    height: 30%;
+  
+  }
+  #sadCat{
+    width: 40%;
+    height: 40%;
+    
   }
   
