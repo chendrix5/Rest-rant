@@ -1,3 +1,5 @@
+
+
 require('dotenv').config()
 const express = require('express')
 const app = express()
@@ -8,7 +10,7 @@ app.engine('jsx', require('express-react-views').createEngine())
 app.use('/places', require('./controllers/places'))
 
 app.get('/', (req, res) => {
-  res.render('Hello world home page')
+  res.send('Home')
 })
 
 app.get('*', (req, res) => {
