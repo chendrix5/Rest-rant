@@ -41,22 +41,22 @@ function show (data) {
               </button>
             </form>
 
-            <form method="POST" action="/show">
+            <form method="POST" action={`/places/${data.id}/comment`} >
             <div className="form-group">
-    <label htmlFor="Author">Author</label>
-    <input className="form-control" id="Author" name="Author" required />
+    <label htmlFor="author">Author</label>
+    <input className="form-control" id="author" name="author" required />
   </div>
   <div className="form-group">
-    <label htmlFor="Content">Content</label>
-    <textarea className="form-control" id="Content" name="Content" rows="4" cols="5"/>
+    <label htmlFor="content">Content</label>
+    <textarea className="form-control" id="content" name="content" rows="4" cols="5"/>
   </div>
   <div className="form-group">
-    <label htmlFor="Star">Star Rating</label>
-    <input className="form-control" id="Star" name="Star" type="number" />
+    <label htmlFor="stars">Star Rating</label>
+    <input className="form-control" id="stars" name="stars" type="number" step=".5" />
   </div>
   <div className="form-group">
-    <label htmlFor="Rant">Rant</label>
-    <input className="form-control" id="Rant" name="Rant" type="checkbox" step=".5" />
+    <label htmlFor="rant">Rant</label>
+    <input className="form-control" id="rant" name="rant" type="checkbox"  />
   </div>
   <button type="submit" className="btn btn-danger">
                 Submit
