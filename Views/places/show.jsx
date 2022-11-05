@@ -48,16 +48,19 @@ function show (data) {
   </div>
   <div className="form-group">
     <label htmlFor="Content">Content</label>
-    <textarea className="form-control" id="Content" name="Content" rows="4" cols="5" />
+    <textarea className="form-control" id="Content" name="Content" rows="4" cols="5"/>
   </div>
   <div className="form-group">
     <label htmlFor="Star">Star Rating</label>
-    <input className="form-control" id="Star" name="Star" />
+    <input className="form-control" id="Star" name="Star" type="number" />
   </div>
   <div className="form-group">
     <label htmlFor="Rant">Rant</label>
-    <input className="form-control" id="Rant" name="Rant" />
+    <input className="form-control" id="Rant" name="Rant" type="checkbox" step=".5" />
   </div>
+  <button type="submit" className="btn btn-danger">
+                Submit
+              </button>
 
             </form>
   
