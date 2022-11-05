@@ -40,6 +40,26 @@ function show (data) {
                 Delete
               </button>
             </form>
+
+            <form method="POST" action="/show">
+            <div className="form-group">
+    <label htmlFor="Author">Author</label>
+    <input className="form-control" id="Author" name="Author" required />
+  </div>
+  <div className="form-group">
+    <label htmlFor="Content">Content</label>
+    <textarea className="form-control" id="Content" name="Content" rows="4" cols="5" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="Star">Star Rating</label>
+    <input className="form-control" id="Star" name="Star" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="Rant">Rant</label>
+    <input className="form-control" id="Rant" name="Rant" />
+  </div>
+
+            </form>
   
 
 
