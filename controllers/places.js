@@ -6,10 +6,18 @@ const db = require('../models')
 router.get('/new', (req, res) => {
   res.render('places/new')
 })
+
 //edit
 router.get('/:id/edit', (req, res) => {
-  res.send('GET edit form stub')
+  db.Place.findById(req.params.id)
+  .then(place => {
+      res.render('places/edit', { place })
+  })
+  .catch(err => {
+      res.render('error404')
+  })
 })
+
 //Index
 router.get('/', (req, res) => {
   db.Place.find()
@@ -48,21 +56,34 @@ router.get('/:id', (req, res) => {
   })
 })
 
-
+//put id?
 router.put('/:id', (req, res) => {
-  res.send('PUT /places/:id stub')
+  db.Place.findByIdAndUpdate(req.params.id, req.body)
+  .then(() => {
+      res.redirect(`/places/${req.params.id}`)
+  })
+  .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+  })
 })
+
+
 //delete
 router.delete('/:id', (req, res) => {
-  res.send('DELETE /places/:id stub')
+  db.Place.findByIdAndDelete(req.params.id)
+  .then(place => {
+      res.redirect('/places')
+  })
+  .catch(err => {
+      console.log('err', err)
+      res.render('error404')
+  })
 })
 
-router.delete('/:id/rant/:rantId', (req, res) => {
-  res.send('GET /places/:id/rant/:rantId stub')
-})
 
 
-
+//rant
 router.post('/:id/rant', (req, res) => {
   res.send('GET /places/:id/rant stub')
 })
